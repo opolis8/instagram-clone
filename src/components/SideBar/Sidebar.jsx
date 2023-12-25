@@ -6,7 +6,7 @@ import { InstagramLogo, InstagramMobileLogo } from "../../assets/constants";
 
 import { BiLogOut } from "react-icons/bi";
 import useLogout from "../../hooks/useLogout";
-import SideBarItems from "./SideBarItems"
+import SideBarItems from "../SideBar/SideBarItems";
 
 const Sidebar = () => {
   const { handleLogout, isLoggingOut } = useLogout();
@@ -44,7 +44,7 @@ const Sidebar = () => {
           <InstagramMobileLogo />
         </Link>
         <Flex direction={"column"} gap={5} cursor={"pointer"}>
-          
+          <SideBarItems />
         </Flex>
         <Tooltip
           hasArrow
@@ -53,7 +53,7 @@ const Sidebar = () => {
           ml={1}
           openDelay={500}
           display={{ base: "block", md: "none" }}
-        ><SideBarItems />
+        >
           <Flex
             onClick={handleLogout}
             alignItems={"center"}
